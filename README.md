@@ -5,3 +5,11 @@ Pequeño proyecto para visualziar la ordenacion de un array utilizando el lengua
 ## Algoritmos disponibles
 
 - Bubble Sort
+
+## Pruebas unitarias
+
+Iniciar pruebas unitarias
+
+```bash
+pytest -v
+```

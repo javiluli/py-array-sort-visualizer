@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 import random
-from sorts.bubble import bubble_sort
+from sorts.bubble.bubble import bubble_sort
 
 root = Tk()
 root.title("Array sort visualizer")
