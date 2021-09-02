@@ -6,6 +6,14 @@ Pequeño proyecto para visualziar la ordenacion de un array utilizando el lengua
 
 - Bubble Sort
 
+## Setup
+
+Instalar los paquetes/dependencias necesarios
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Pruebas unitarias
 
 Iniciar pruebas unitarias
