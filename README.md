@@ -2,11 +2,19 @@
 
 Pequeño proyecto para visualziar la ordenacion de un array utilizando el lenguaje de Python y como UI TKinter
 
+## Ejecutar programa
+
+Desde la terminal
+
+```bash
+python3 main.py
+```
+
 ## Algoritmos disponibles
 
 - Bubble Sort
 
-## Setup
+## Configuración
 
 Instalar los paquetes/dependencias necesarios
 
