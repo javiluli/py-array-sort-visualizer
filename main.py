@@ -1,9 +1,12 @@
+import threading
 from tkinter import *
 from tkinter import ttk
-import threading
 
 # Algoritmos de ordenacion / sorts
-from sorts.bubble.bubble import bubble_sort
+from sorts.bubble.bubble import *
+from sorts.optimizedBubble.optimizedBubble import *
+from sorts.inserccion.inserccion import *
+from sorts.selection.selection import *
 
 # Importar clases
 from classes.Configuracion import Configuracion
@@ -16,7 +19,9 @@ class MainProgram:
 
   # Atributos para configuracion de la animacion
   numBars = 16
+  timeSleep = 0.01
   mostrarTextoBarras = False
+  selectAlgoritm = 'Bubble Sort' # Valor por defecto
 
   def __init__(self):
     self.root = Tk()
@@ -94,7 +99,18 @@ class MainProgram:
     self.drawData(self.data, ['#9370DB' for x in range(len(self.data))])
 
   def startAlgorithm(self):
-    bubble_sort(self.data, self.drawData, 0.01)
+    if self.selectAlgoritm == 'Bubble Sort':
+      bubble_sort(self.data, self.drawData, self.timeSleep)
+    
+    elif self.selectAlgoritm == 'Optimized Bubble Sort':
+      optimizedBubble_sort(self.data, self.drawData, self.timeSleep)
+
+    elif self.selectAlgoritm == 'Inserccion Sort':
+      inserccion_sort(self.data, self.drawData, self.timeSleep)
+
+    elif self.selectAlgoritm == 'Selection Sort':
+      selection_sort(self.data, self.drawData, self.timeSleep)  
+
 
   def initGenerate(self):
     self.data = arraySort.initArray(self.data, self.numBars)
@@ -103,8 +119,16 @@ class MainProgram:
   def openSettings(self):
     settings=Configuracion(self.root)
     dataSettings=settings.obtenerConfiguracion()
+    # [0]
     self.numBars = dataSettings[0]
-    self.mostrarTextoBarras = dataSettings[1]
+    # [1]
+    self.timeSleep = dataSettings[1]
+    # [2]
+    self.mostrarTextoBarras = dataSettings[2]
+    # [3]
+    self.selectAlgoritm = dataSettings[3]
+
+    self.root.title("Array sort visualizer - " + self.selectAlgoritm)
     self.initGenerate()
 
 if __name__ == '__main__':
