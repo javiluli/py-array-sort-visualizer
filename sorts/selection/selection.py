@@ -1,26 +1,26 @@
-import time
+# import time
 
-def selection_sort(data, drawData=None, timeTick=0):
-  n = len(data)
+# from sorts.sort import Sort
 
-  for i in range(n):
-    min = i
-    j = i + 1
 
-    for j in range(n):
-      if (data[j] > data[min]):
-        min = j
+# class Selection(Sort):
 
-      data[i], data[min] = data[min], data[i]
+#   def __init__(self):
+#     pass
 
-    # Dibujar datos
-    if drawData != None: 
-      drawData(data, ['#4682B4' if x == i + 1 else "#9370DB" for x in range(len(data))])
+#   def selection_sort(self, canvas):
+#     # Traverse through all array elements
+#     for i in range(len(self.lengthList)):
 
-    # retardo
-    time.sleep(timeTick)
+#       MIN_IDX = i
+#       for j in range(i + 1, len(self.lengthList)):
+#         if self.lengthList[MIN_IDX] > self.lengthList[j]:
+#           MIN_IDX = j
 
-  if drawData != None:
-    drawData(data, ['#4682B4' for x in range(len(data))])
+#       self.lengthList[i], self.lengthList[MIN_IDX] = self.lengthList[MIN_IDX], self.lengthList[i]
 
-  return data
+#       self.barList[i], self.barList[MIN_IDX] = self.barList[MIN_IDX], self.barList[i]
+
+#       self.swapCoords(self.barList[MIN_IDX], self.barList[i], canvas)
+
+#       yield

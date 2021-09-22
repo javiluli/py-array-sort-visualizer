@@ -1,5 +1,5 @@
 import unittest
-from inserccion import inserccion_sort
+from Insertion import inserccion_sort
 
 class TestInserccionSort(unittest.TestCase):
   data = [2, 7, 0, 1, 9, 6, 8, 3, 4, 5]

@@ -1,19 +1,22 @@
-import time
+# from sorts.sort import Sort
 
-def bubble_sort(data, drawData=None, timeTick=0):
-  for i in range(len(data)):
 
-    for j in range(len(data) - 1):
+# class Bubble(Sort):
 
-      if data[j] > data[j+1]:
-        data[j], data[j+1] = data[j+1], data[j]
+#   def __init__(self):
+#     pass
+  
+#   def bubble_sort(self, canvas):
+#     for i in range(len(self.lengthList) - 1):
 
-      if drawData != None: 
-        drawData(data, ['#4682B4' if x == j + 1 else "#9370DB" for x in range(len(data))])
-
-      time.sleep(timeTick)
-
-  if drawData != None:
-    drawData(data, ['#4682B4' for x in range(len(data))])
-
-  return data
+#       for j in range(len(self.lengthList) - i - 1):
+        
+#         if self.lengthList[j] > self.lengthList[j + 1]:
+          
+#           self.lengthList[j], self.lengthList[j + 1] = self.lengthList[j + 1], self.lengthList[j]
+          
+#           self.barList[j], self.barList[j + 1] = self.barList[j + 1], self.barList[j]
+          
+#           self.swapCoords(self.barList[j + 1], self.barList[j], canvas)
+          
+#           yield

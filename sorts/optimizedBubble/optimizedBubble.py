@@ -1,30 +1,31 @@
-import time
+# from sorts.sort import Sort
 
-def optimizedBubble_sort(data, drawData=None, timeTick=0):
-  n = len(data)
+# class OptimizedBubble(Sort):
 
-  for i in range(n):
-    swapped = False
+#   def __init__(self):
+#     pass
 
-    for j in range(0, n-i-1):
-      # swap values
-      if data[j] > data[j+1]:
-        data[j], data[j+1] = data[j+1], data[j]
-        swapped = True
+#   def optimizedBubble_sort(self, canvas):
 
-      # Dibujar datos
-      if drawData != None: 
-        drawData(data, ['#4682B4' if x == j + 1 else "#9370DB" for x in range(len(data))])
-
-      # retardo
-      time.sleep(timeTick)
+#     n = len(self.lengthList)
     
-    # si no ha hecho swap values
-    if swapped == False:
-      break
+#     for i in range(n):
+#       swapped = False
 
-  if drawData != None:
-    drawData(data, ['#4682B4' for x in range(len(data))])
+#       for j in range(n - i - 1):
+        
+#         # swap values
+#         if self.lengthList[j] > self.lengthList[j + 1]:
+#           self.lengthList[j], self.lengthList[j + 1] = self.lengthList[j + 1], self.lengthList[j]
 
-  return data
-    
+#           self.barList[j], self.barList[j + 1] = self.barList[j + 1], self.barList[j]
+
+#           self.swapCoords(self.barList[j + 1], self.barList[j], canvas)
+
+#           swapped = True
+          
+#           yield
+
+#       # si no ha hecho swap values
+#       if not swapped:
+#         break
