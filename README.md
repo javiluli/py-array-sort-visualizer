@@ -26,6 +26,12 @@ Desde la terminal
 python3 main.py
 ```
 
+Crear ejecutable `.exe`
+
+```bash
+pyinstaller --window --onefile main.py
+```
+
 ## Algoritmos disponibles
 
 - Bubble Sort
